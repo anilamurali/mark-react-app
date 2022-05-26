@@ -1,4 +1,5 @@
 import React from 'react'
+import Nav from './Nav'
 
 const Viewmark = () => {
     var viewmark=[
@@ -10,12 +11,13 @@ const Viewmark = () => {
     ]
   return (
     <div>
+        <Nav/>
         <div>
         
         <div class="container">
     <div class="row ">
         <div class="col-col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <table class="table table-striped table-dark">
+            <table class="table table-striped table-primary">
                 <thead>
                   <tr>
                     <th scope="col">NAME</th>
