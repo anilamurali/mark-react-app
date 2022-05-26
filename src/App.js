@@ -4,11 +4,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Addmark from './Component/Addmark';
 import Viewmark from './Component/Viewmark';
+import Nav from './Component/Nav';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
     <>
-    <Viewmark/>
+  <BrowserRouter>
+  <Routes>
+  <Route path='/' exact element={<Addmark/>}/>
+      <Route path='/view' exact element={<Viewmark/>}/>
+  </Routes>
+  </BrowserRouter>
     </>
   );
 }
