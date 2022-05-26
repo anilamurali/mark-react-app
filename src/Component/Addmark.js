@@ -29,7 +29,7 @@ const Addmark = () => {
                 </div>
                 
                 <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                    <button onClick={setData} class="btn btn-primary">SUBMIT</button>
+                    <button onClick={setData} class="btn btn-dark">SUBMIT</button>
                 </div>
             </div>
         </div>
