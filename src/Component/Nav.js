@@ -18,6 +18,11 @@ const Nav = () => {
             <Link class="nav-link active" to='/'>ADD MARK</Link>
             
           </li>
+          <li class="nav-item">
+        
+            <Link class="nav-link active" to='/search'>SEARCH</Link>
+            
+          </li>
           
           <li class="nav-item">
             <Link class="nav-link" to='/view'>VIEW MARK</Link>
