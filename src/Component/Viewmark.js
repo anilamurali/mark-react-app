@@ -1,14 +1,19 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useState } from 'react'
 import Nav from './Nav'
 
 const Viewmark = () => {
-    var viewmark=[
-        {
-            "name":"anila",
-            "admno":"MZC19MCA004",
-            "cgpa":"7.9"
-        }
-    ]
+  var [viewmark,setViewlist]=useState([])
+  var [loadstatus,setLoadstatus]=useState(true)
+        axios.get("http://localhost:4500/api/viewall").then(
+            (response)=>{
+                console.log(response.data)
+                setViewlist(response.data)
+                setLoadstatus(false)
+    
+            }
+        )
+    
   return (
     <div>
         <Nav/>

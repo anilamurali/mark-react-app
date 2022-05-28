@@ -1,3 +1,4 @@
+import axios from 'axios'
 import React, { useState } from 'react'
 import Nav from './Nav'
 
@@ -8,6 +9,19 @@ const Addmark = () => {
     const setData=()=>{
         var data={"name":name,"admno":admno,"cgpa":cgpa}
         console.log(data)
+        axios.post("http://localhost:4500/api/addmark",data).then(
+            (response)=>{
+                console.log(response.data)
+                if(response.data.status=="success"){
+                    alert("Successfully Added")
+                }
+                else{
+                    alert("Something went Wrong!")
+                }
+                
+            }
+        )
+         
     }
 
   return (
